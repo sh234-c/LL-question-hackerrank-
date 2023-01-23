@@ -1,0 +1,15 @@
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
+    if (head == NULL) {
+        return create_singly_linked_list_node(data);
+    }
+    SinglyLinkedListNode*ptr=(SinglyLinkedListNode*)malloc(sizeof(SinglyLinkedList));
+    SinglyLinkedListNode*p=head;
+    ptr->data=data;
+    while(p->next!=NULL){
+        p=p->next;
+    }
+        p->next=ptr;
+        ptr->next=NULL;
+    
+        return head;
+    }
